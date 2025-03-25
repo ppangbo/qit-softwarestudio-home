@@ -1,0 +1,23 @@
+---
+interface ContactItem {
+  icon: string;
+  text: string;
+}
+
+interface Props {
+  items: ContactItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="space-y-4">
+  {
+    items.map((item) => (
+      <div class="flex items-center gap-3">
+        <Fragment set:html={item.icon} />
+        <span>{item.text}</span>
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,99 @@
+---
+import SectionHeader from "../ui/SectionHeader.astro";
+import ProjectCard from "./projects/ProjectCard.astro";
+
+// 项目数据
+const projects = [
+  {
+    title: "校园信息管理系统",
+    description:
+      "为学校开发的综合信息管理平台，包括学生管理、课程管理、成绩管理等功能。",
+    icon: `<svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="text-primary"
+    >
+      <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+      <path d="M7 7h10"></path>
+      <path d="M7 12h10"></path>
+      <path d="M7 17h10"></path>
+    </svg>`,
+    technologies: ["Java", "Spring Boot", "MySQL"],
+  },
+  {
+    title: "移动学习平台",
+    description:
+      "一款面向学生的移动学习应用，提供课程学习、资料下载、在线测试等功能。",
+    icon: `<svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="text-primary"
+    >
+      <path d="M12 2H2v10h10V2Z"></path>
+      <path d="M12 12H2v10h10V12Z"></path>
+      <path d="M22 2h-10v20h10V2Z"></path>
+    </svg>`,
+    technologies: ["React Native", "Node.js", "MongoDB"],
+  },
+  {
+    title: "智能图书管理系统",
+    description:
+      "为图书馆开发的智能管理系统，包括图书借阅、归还、查询、推荐等功能。",
+    icon: `<svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="text-primary"
+    >
+      <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+      <path d="M3 9V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"></path>
+      <path d="M12 11v6"></path>
+      <path d="M8 11v6"></path>
+      <path d="M16 11v6"></path>
+    </svg>`,
+    technologies: ["Python", "Django", "PostgreSQL"],
+  },
+];
+---
+
+<!-- 项目展示 -->
+<section id="projects" class="bg-card/50 py-16 pt-24 md:pt-28">
+  <div class="container mx-auto px-4 md:px-6">
+    <SectionHeader
+      title="项目展示"
+      description="我们的团队已经成功完成了多个优秀项目"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            icon={project.icon}
+            technologies={project.technologies}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

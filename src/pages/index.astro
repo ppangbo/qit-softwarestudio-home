@@ -1,11 +1,85 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import AboutUs from "@/components/home/AboutUs.astro";
+import Advantages from "@/components/home/Advantages.astro";
+import ContactUs from "@/components/home/ContactUs.astro";
+import Footer from "@/components/home/Footer.astro";
+import Header from "@/components/home/Header.astro";
+import Hero from "@/components/home/Hero.astro";
+import Projects from "@/components/home/Projects.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <!-- 导航栏 -->
+  <Header />
+
+  <main>
+    <!-- 英雄区域 -->
+    <Hero />
+
+    <!-- 关于我们 -->
+    <AboutUs />
+
+    <!-- 团队优势 -->
+    <Advantages />
+
+    <!-- 项目展示 -->
+    <Projects />
+
+    <!-- 联系我们 -->
+    <ContactUs />
+  </main>
+
+  <!-- 页脚 -->
+  <Footer />
 </Layout>
+
+<style>
+  /* 自定义样式 */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+
+  // 添加滚动事件监听器，控制导航栏阴影效果
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("nav");
+
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        nav?.classList.add("shadow-md");
+        nav?.classList.remove("shadow-sm");
+      } else {
+        nav?.classList.remove("shadow-md");
+        nav?.classList.add("shadow-sm");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // 初始化时也执行一次
+    handleScroll();
+  });
+</script>
