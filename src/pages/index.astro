@@ -2,17 +2,12 @@
 import AboutUs from "@/components/home/AboutUs.astro";
 import Advantages from "@/components/home/Advantages.astro";
 import ContactUs from "@/components/home/ContactUs.astro";
-import Footer from "@/components/home/Footer.astro";
-import Header from "@/components/home/Header.astro";
 import Hero from "@/components/home/Hero.astro";
 import Projects from "@/components/home/Projects.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <!-- 导航栏 -->
-  <Header />
-
   <main>
     <!-- 英雄区域 -->
     <Hero />
@@ -29,9 +24,6 @@ import Layout from "../layouts/Layout.astro";
     <!-- 联系我们 -->
     <ContactUs />
   </main>
-
-  <!-- 页脚 -->
-  <Footer />
 </Layout>
 
 <style>

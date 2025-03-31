@@ -1,0 +1,17 @@
+---
+import { Icons } from "./icons";
+import { Menu } from "./Menu";
+---
+
+<header>
+  <div
+    class="fixed top-0 left-0 w-full py-4 px-4 md:px-6 flex items-center justify-between z-50 bg-background/80 backdrop-blur-sm shadow-md transition-all duration-200"
+  >
+    <div class="flex items-center space-x-2">
+      <Icons.logo className="h-6 w-6 text-primary" />
+      <span class="text-2xl font-bold text-primary">QIT</span>
+      <span class="text-xl font-medium">软件工作室</span>
+    </div>
+    <Menu client:load />
+  </div>
+</header>
