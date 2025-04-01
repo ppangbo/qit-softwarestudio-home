@@ -1,0 +1,642 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SectionHeader from "@/components/home/SectionHeader.astro";
+---
+
+<Layout>
+  <main class="container mx-auto px-4 py-16 md:py-24">
+    <!-- 软件工作室介绍 -->
+    <section class="mb-20">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">软件开发工作室</h1>
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+          专注于软件开发，提供全面的现代Web应用解决方案
+        </p>
+      </div>
+    </section>
+
+    <!-- 技术能力 -->
+    <section class="mb-20" id="tech-stack">
+      <SectionHeader
+        title="技术能力"
+        description="我们紧跟技术前沿，不断探索和应用新兴技术，提供全面的技术解决方案"
+      />
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="bg-card rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
+        >
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 mr-2 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+            后端开发
+          </h3>
+          <p class="text-muted-foreground mb-4">
+            以Java与Go为核心，构建高性能、高可用的后端服务
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              Java生态系统 (Spring Boot, Spring Cloud)
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              Go语言高并发处理
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              Rust高性能应用探索
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-card rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
+        >
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 mr-2 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            前端开发
+          </h3>
+          <p class="text-muted-foreground mb-4">
+            现代化的Web前端开发，提供优秀的用户体验
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              Vue/React前端框架
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              NuxtJS/NextJS服务端渲染
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              React Native/Flutter跨端开发
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-card rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
+        >
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 mr-2 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+              ></path>
+            </svg>
+            架构设计
+          </h3>
+          <p class="text-muted-foreground mb-4">
+            现代化的系统架构设计，确保系统的高性能与高可用
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              微服务架构
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              GraphQL API设计
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              容器化技术 (Docker, Kubernetes)
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-card rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
+        >
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 mr-2 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
+            </svg>
+            DevOps实践
+          </h3>
+          <p class="text-muted-foreground mb-4">
+            高效的开发运维一体化实践，确保系统的稳定性与可靠性
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              CI/CD自动化部署
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              自动化测试
+            </li>
+            <li class="flex items-center">
+              <span class="bg-primary/10 text-primary rounded-full p-1 mr-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              监控与日志系统
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 开发方法论 -->
+    <section class="mb-20" id="methodology">
+      <SectionHeader
+        title="开发方法论"
+        description="我们不断迭代与创新，提炼出一套完整且灵活的软件开发方法论"
+      />
+
+      <div class="bg-card rounded-lg shadow-md p-8">
+        <p class="text-lg leading-relaxed mb-6">
+          在开发方法论方面，我们不断迭代与创新，基于MVC架构、DDD（领域驱动设计）与六边形架构的思想，提炼出一套完整且灵活的软件开发方法论。在产品迭代过程中，我们结合敏捷开发，实现快速、稳定的业务需求落地，同时保证代码的高内聚、低耦合，以支持持续性的代码优化和迭代。
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <div
+            class="border border-border rounded-lg p-6 bg-card/50 hover:bg-card/80 transition-colors"
+          >
+            <h4 class="text-lg font-semibold mb-3 text-primary">
+              架构设计原则
+            </h4>
+            <ul class="space-y-2 text-muted-foreground">
+              <li>• MVC架构</li>
+              <li>• DDD领域驱动设计</li>
+              <li>• 六边形架构</li>
+              <li>• 微服务架构</li>
+            </ul>
+          </div>
+
+          <div
+            class="border border-border rounded-lg p-6 bg-card/50 hover:bg-card/80 transition-colors"
+          >
+            <h4 class="text-lg font-semibold mb-3 text-primary">开发流程</h4>
+            <ul class="space-y-2 text-muted-foreground">
+              <li>• 敏捷开发</li>
+              <li>• 持续集成/持续部署</li>
+              <li>• 测试驱动开发</li>
+              <li>• 代码审查</li>
+            </ul>
+          </div>
+
+          <div
+            class="border border-border rounded-lg p-6 bg-card/50 hover:bg-card/80 transition-colors"
+          >
+            <h4 class="text-lg font-semibold mb-3 text-primary">
+              代码质量保障
+            </h4>
+            <ul class="space-y-2 text-muted-foreground">
+              <li>• 高内聚、低耦合</li>
+              <li>• 自动化测试</li>
+              <li>• 代码规范</li>
+              <li>• 性能优化</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 人才培养 -->
+    <section class="mb-20" id="training">
+      <SectionHeader
+        title="人才培养体系"
+        description="我们高度重视人才培养体系的建设，为开发者提供系统化的学习路径"
+      />
+
+      <div
+        class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg p-8"
+      >
+        <p class="text-lg leading-relaxed mb-8">
+          除了深耕技术与学术研究，我们也高度重视人才培养体系的建设。目前，工作室已总结并归纳出五大课程体系，涵盖软件开发通用技能、设计模式、系统架构设计、算法及深度学习五个方向，致力于为开发者提供系统化的学习路径。
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div
+            class="bg-card rounded-lg p-5 text-center shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold mb-2">软件开发通用技能</h4>
+            <p class="text-sm text-muted-foreground">
+              基础编程、版本控制、数据库、Web基础
+            </p>
+          </div>
+
+          <div
+            class="bg-card rounded-lg p-5 text-center shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold mb-2">设计模式</h4>
+            <p class="text-sm text-muted-foreground">
+              创建型、结构型、行为型模式应用
+            </p>
+          </div>
+
+          <div
+            class="bg-card rounded-lg p-5 text-center shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold mb-2">系统架构设计</h4>
+            <p class="text-sm text-muted-foreground">微服务、DDD、云原生架构</p>
+          </div>
+
+          <div
+            class="bg-card rounded-lg p-5 text-center shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold mb-2">算法</h4>
+            <p class="text-sm text-muted-foreground">
+              数据结构、算法设计、竞赛训练
+            </p>
+          </div>
+
+          <div
+            class="bg-card rounded-lg p-5 text-center shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-semibold mb-2">深度学习</h4>
+            <p class="text-sm text-muted-foreground">
+              机器学习基础、神经网络、应用实践
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 开源社区贡献 -->
+    <section class="mb-12" id="open-source">
+      <SectionHeader
+        title="开源社区贡献"
+        description="我们的团队成员积极参与多个开源社区的建设，为开源社区的繁荣贡献力量"
+      />
+
+      <div class="bg-card rounded-lg shadow-md p-8">
+        <p class="text-lg leading-relaxed mb-8">
+          与此同时，我们的团队成员还积极参与多个开源社区的建设，包括OpenEuler
+          RISC-V、Spring Cloud
+          Alibaba、CloudWeGo、Kratos、Docker、Nunu和Create-Neat等。我们的成员在中科院软件所、字节跳动青训营、清华大学rCore操作系统训练营等项目中担任实习生、宣传大使与课程助理，为开源社区的繁荣贡献了自己的力量。
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div
+            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          >
+            <h4 class="font-semibold mb-2">OpenEuler RISC-V</h4>
+            <p class="text-sm text-muted-foreground">开源操作系统社区</p>
+          </div>
+
+          <div
+            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          >
+            <h4 class="font-semibold mb-2">Spring Cloud Alibaba</h4>
+            <p class="text-sm text-muted-foreground">微服务框架</p>
+          </div>
+
+          <div
+            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          >
+            <h4 class="font-semibold mb-2">CloudWeGo</h4>
+            <p class="text-sm text-muted-foreground">云原生中间件</p>
+          </div>
+
+          <div
+            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          >
+            <h4 class="font-semibold mb-2">Docker</h4>
+            <p class="text-sm text-muted-foreground">容器化平台</p>
+          </div>
+
+          <div
+            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          >
+            <h4 class="font-semibold mb-2">Nunu</h4>
+            <p class="text-sm text-muted-foreground">Go应用脚手架</p>
+          </div>
+
+          <div
+            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          >
+            <h4 class="font-semibold mb-2">Create-Neat</h4>
+            <p class="text-sm text-muted-foreground">前端项目生成器</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 加入我们 -->
+    <section id="join-us">
+      <div
+        class="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-8 text-center"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">加入我们</h2>
+        <p class="text-lg mb-6 max-w-2xl mx-auto">
+          如果你对软件开发充满热情，希望在实战中提升自己的专业能力，欢迎加入我们的团队！
+        </p>
+        <a
+          href="#contact"
+          class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+        >
+          联系我们
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* 自定义样式 */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
