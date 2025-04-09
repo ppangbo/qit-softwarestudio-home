@@ -1,0 +1,21 @@
+body {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+.unselectable,
+.studio-card,
+.studio-card * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dark .studio-card,
+.dark .studio-card * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
