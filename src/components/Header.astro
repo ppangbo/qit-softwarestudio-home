@@ -12,6 +12,13 @@ import { Menu } from "./Menu";
       <span class="text-2xl font-bold text-primary">QIT</span>
       <span class="text-xl font-medium">软件工作室</span>
     </a>
-    <Menu client:load />
+    <div class="flex items-center space-x-4 ml-auto">
+      <Menu client:load />
+      {/* Login link will be moved into Menu component */}
+    </div>
   </div>
 </header>
+
+<script>
+  // Login link logic moved to Menu.tsx
+</script>

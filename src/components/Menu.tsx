@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect, useState } from "react"; // Import useState and useEffect
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./ModeToggle";
 import { Icons } from "@/components/icons";
@@ -51,6 +52,39 @@ const advantageItems = [
 ];
 
 export function Menu() {
+  // Add state for login link text and href
+  const [loginText, setLoginText] = useState("登录");
+  const [loginHref, setLoginHref] = useState("/login");
+
+  useEffect(() => {
+    // Check login status on component mount and update state
+    if (localStorage.getItem('authToken')) {
+      setLoginText('返回首页');
+      setLoginHref('/');
+    } else {
+      setLoginText('登录');
+      setLoginHref('/login');
+    }
+
+    // Optional: Add event listener for storage changes if needed
+    const handleStorageChange = () => {
+      if (localStorage.getItem('authToken')) {
+        setLoginText('返回首页');
+        setLoginHref('/');
+      } else {
+        setLoginText('登录');
+        setLoginHref('/login');
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   return (
     <div className="flex items-center space-x-4">
       <NavigationMenu>
@@ -104,9 +138,17 @@ export function Menu() {
               </a>
             </NavigationMenuLink>
           </NavigationMenuItem>
+
+          {/* Add Login Link Item */}
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <a href={loginHref} className={navigationMenuTriggerStyle()}>
+                {loginText}
+              </a>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-
       <ModeToggle />
     </div>
   );
