@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import SectionHeader from "@/components/home/SectionHeader.astro";
+import ProjectShowcase from '@/components/software/ProjectShowcase.astro'; // Added import
 ---
 
 <Layout>
@@ -416,7 +417,7 @@ import SectionHeader from "@/components/home/SectionHeader.astro";
         class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg p-8"
       >
         <p class="text-lg leading-relaxed mb-8">
-          除了深耕技术与学术研究，我们也高度重视人才培养体系的建设。目前，工作室已总结并归纳出五大课程体系，涵盖软件开发通用技能、设计模式、系统架构设计、算法及深度学习五个方向，致力于为开发者提供系统化的学习路径。
+          除了深耕技术与学术研究，我们也重点关注人才培养体系的建设。目前，工作室已总结并归纳出五大课程体系，涵盖软件开发通用技能、设计模式、系统架构设计、算法及深度学习五个方向，致力于为开发者提供系统化的学习路径。
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -590,26 +591,35 @@ import SectionHeader from "@/components/home/SectionHeader.astro";
             <p class="text-sm text-muted-foreground">云原生中间件</p>
           </div>
 
-          <div
-            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          <a 
+            href="https://www.docker.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="block border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
           >
             <h4 class="font-semibold mb-2">Docker</h4>
             <p class="text-sm text-muted-foreground">容器化平台</p>
-          </div>
+          </a>
 
-          <div
-            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          <a 
+            href="https://github.com/go-nunu/nunu" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="block border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
           >
             <h4 class="font-semibold mb-2">Nunu</h4>
             <p class="text-sm text-muted-foreground">Go应用脚手架</p>
-          </div>
+          </a>
 
-          <div
-            class="border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
+          <a 
+            href="https://github.com/neat-run/create-neat" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="block border border-border rounded-lg p-4 text-center hover:bg-accent/50 transition-colors"
           >
             <h4 class="font-semibold mb-2">Create-Neat</h4>
             <p class="text-sm text-muted-foreground">前端项目生成器</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -618,6 +628,24 @@ import SectionHeader from "@/components/home/SectionHeader.astro";
     <section id="join-us">
       <div class="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-8 text-center">
         <h2 class="text-2xl md:text-3xl font-bold mb-4">加入我们</h2>
+        <p class="text-lg mb-6 max-w-2xl mx-auto">
+          如果你对软件开发充满热情，希望在实战中提升自己的专业能力，欢迎加入我们的团队！
+        </p>
+        <a
+          href="/#contact" 
+          class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+        >
+          联系我们
+        </a>
+      </div>
+    </section>
+    <!-- 项目展示 -->
+    <ProjectShowcase />
+
+    <!-- 联系我们 -->
+    <section class="mb-12" id="contact">
+      <div class="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">联系我们</h2>
         <p class="text-lg mb-6 max-w-2xl mx-auto">
           如果你对软件开发充满热情，希望在实战中提升自己的专业能力，欢迎加入我们的团队！
         </p>

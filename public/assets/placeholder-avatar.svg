@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+  <circle cx="12" cy="7" r="4"/>
+  <rect width="60" height="60" x="2" y="2" rx="8" ry="8" fill="#e5e7eb"/> <!-- Light gray background -->
+  <g transform="translate(16, 16) scale(2)">
+    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" stroke="#9ca3af"/> <!-- Gray lines -->
+    <circle cx="12" cy="7" r="4" stroke="#9ca3af"/>
+  </g>
+</svg>

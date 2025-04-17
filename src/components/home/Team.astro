@@ -1,0 +1,52 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+
+// 示例团队成员数据
+const teamMembers = [
+  {
+    name: "成员 A",
+    role: "负责人 / 后端开发",
+    avatar: "/assets/placeholder-avatar.svg", // 替换为实际头像路径
+    description: "专注于构建高效可靠的后端服务。"
+  },
+  {
+    name: "成员 B",
+    role: "前端开发",
+    avatar: "/assets/placeholder-avatar.svg",
+    description: "致力于打造用户友好的前端界面。"
+  },
+  {
+    name: "成员 C",
+    role: "UI/UX 设计师",
+    avatar: "/assets/placeholder-avatar.svg",
+    description: "负责产品的视觉设计和用户体验。"
+  },
+  // 可以添加更多成员...
+];
+---
+
+<section id="team" class="py-16 md:py-24 bg-background">
+  <div class="container mx-auto px-4">
+    <SectionHeader
+      title="我们的团队"
+      description="认识驱动我们前进的核心成员"
+    />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      {teamMembers.map((member) => (
+        <div class="bg-card border border-border rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+          <img
+            src={member.avatar}
+            alt={`${member.name} 头像`}
+            class="w-24 h-24 rounded-full mx-auto mb-4 bg-muted object-cover"
+            loading="lazy"
+          />
+          <h4 class="text-lg font-semibold mb-1">{member.name}</h4>
+          <p class="text-sm text-primary mb-2">{member.role}</p>
+          <p class="text-muted-foreground text-sm">{member.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- 可以在 public/assets/ 下添加一个 placeholder-avatar.svg 文件 -->

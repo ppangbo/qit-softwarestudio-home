@@ -56,8 +56,8 @@ export function Menu() {
   const [loginText, setLoginText] = useState("登录");
   const [loginHref, setLoginHref] = useState("/login");
 
-  useEffect(() => {
-    // Check login status on component mount and update state
+  // Function to update login state based on localStorage
+  const updateLoginState = () => {
     if (localStorage.getItem('authToken')) {
       setLoginText('返回首页');
       setLoginHref('/');
@@ -65,23 +65,18 @@ export function Menu() {
       setLoginText('登录');
       setLoginHref('/login');
     }
+  };
 
-    // Optional: Add event listener for storage changes if needed
-    const handleStorageChange = () => {
-      if (localStorage.getItem('authToken')) {
-        setLoginText('返回首页');
-        setLoginHref('/');
-      } else {
-        setLoginText('登录');
-        setLoginHref('/login');
-      }
-    };
+  useEffect(() => {
+    // Initial check on component mount
+    updateLoginState();
 
-    window.addEventListener('storage', handleStorageChange);
+    // Add event listener for storage changes
+    window.addEventListener('storage', updateLoginState);
 
     // Cleanup listener on component unmount
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('storage', updateLoginState);
     };
   }, []); // Empty dependency array ensures this runs only once on mount
 
