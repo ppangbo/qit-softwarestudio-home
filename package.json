@@ -16,9 +16,11 @@
     "@radix-ui/react-navigation-menu": "^1.2.5",
     "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/vite": "^4.0.15",
+    "@types/bcrypt": "^5.0.2",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "astro": "^5.5.4",
+    "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.483.0",
@@ -29,5 +31,9 @@
     "tailwindcss": "^4.0.15",
     "tw-animate-css": "^1.2.4",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.6.0",
+    "prisma": "^6.6.0"
   }
 }

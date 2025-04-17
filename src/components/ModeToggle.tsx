@@ -9,15 +9,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export function ModeToggle() {
-  const [theme, setThemeState] = React.useState<
-    "theme-light" | "dark" | "system"
-  >("theme-light");
+type Theme = "dark" | "light" | "system";
 
-  React.useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    setThemeState(isDarkMode ? "dark" : "theme-light");
-  }, []);
+export function ModeToggle() {
+  // Initialize state from localStorage or default to 'system'
+  const [theme, setThemeState] = React.useState<Theme>(() => {
+    if (typeof window !== 'undefined') {
+      const storedTheme = localStorage.getItem("theme") as Theme | null;
+      if (storedTheme && ["light", "dark", "system"].includes(storedTheme)) {
+        return storedTheme;
+      }
+    }
+    return "system"; // Default theme
+  });
 
   React.useEffect(() => {
     const isDark =
@@ -25,7 +29,15 @@ export function ModeToggle() {
       (theme === "system" &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+    // Save theme to localStorage
+    if (typeof window !== 'undefined') {
+        localStorage.setItem("theme", theme);
+    }
   }, [theme]);
+
+  // No need for the initial useEffect that reads classList, 
+  // as the initial state now comes from localStorage
 
   return (
     <DropdownMenu>
@@ -37,7 +49,8 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setThemeState("theme-light")}>
+        {/* Update onClick handlers to use the correct theme values */}
+        <DropdownMenuItem onClick={() => setThemeState("light")}>
           Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setThemeState("dark")}>
